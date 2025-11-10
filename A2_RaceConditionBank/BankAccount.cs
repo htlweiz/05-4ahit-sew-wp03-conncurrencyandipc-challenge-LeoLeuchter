@@ -31,6 +31,9 @@ public class BankAccount
 
     public int GetBalance()
     {
-        return balance;
+        lock (lockobject)
+        {
+            return balance;
+        }
     }
 }

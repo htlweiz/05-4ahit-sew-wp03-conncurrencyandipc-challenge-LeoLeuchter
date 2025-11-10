@@ -36,6 +36,8 @@ class Program
         accountt.Deposit(100);
         Thread.Sleep(100);
         accountt.Withdraw(150);
+        Thread.Sleep(100);
+        account.GetBalance();
     }
 }
 
