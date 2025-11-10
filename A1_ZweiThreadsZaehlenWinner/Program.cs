@@ -20,7 +20,18 @@ class Program
 
         t1.Join();
         t2.Join();
-        
+
+
+        if(countA == countB)
+        {
+            Console.WriteLine("Unentschieden");
+        } else if (countA > countB)
+        {
+            Console.WriteLine("A gewinnt: " + countA);
+        } else
+        {
+            Console.WriteLine("B gewinnt: " + countB);
+        }
     }
 
     private static void CountUpThreadA()
@@ -31,7 +42,6 @@ class Program
             Thread.Sleep(100);
             if (countA == countB)
             {
-                Console.WriteLine("Same number");
                 break;
             }
         }
@@ -45,7 +55,6 @@ class Program
             Thread.Sleep(100);
             if (countB == countA)
             {
-                Console.WriteLine("Same number");
                 break;
             }
         }
