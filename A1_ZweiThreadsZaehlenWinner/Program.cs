@@ -22,15 +22,20 @@ class Program
         t2.Join();
 
 
-        if(countA == countB)
+        if (countA == countB)
         {
-            Console.WriteLine("Unentschieden");
-        } else if (countA > countB)
-        {
-            Console.WriteLine("A gewinnt: " + countA);
-        } else
-        {
-            Console.WriteLine("B gewinnt: " + countB);
+            if (countA < 50)
+            {
+                Console.WriteLine($"Thread A gewinnt mit {countA}!");
+            }
+            else if(countB > 50)
+            {
+                Console.WriteLine($"Thread B gewinnt mit {countB}!");
+            }
+            else
+            {
+                Console.WriteLine("Unentschieden!");
+            }
         }
     }
 
